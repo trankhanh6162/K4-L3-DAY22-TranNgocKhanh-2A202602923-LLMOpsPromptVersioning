@@ -10,7 +10,7 @@ from dotenv import load_dotenv
 
 # Tải .env từ thư mục gốc của project (Lab/)
 _root = Path(__file__).parent.parent
-load_dotenv(_root / ".env")
+load_dotenv(_root / ".env", override=True)
 
 # ── LangSmith — PHẢI set trước khi import LangChain ──────────────────────
 os.environ["LANGCHAIN_TRACING_V2"] = os.getenv("LANGCHAIN_TRACING_V2", "true")
